@@ -848,7 +848,7 @@ pub unsafe extern "C" fn raw_string_ref(msg: *const RawString) -> *const raw::c_
 #[no_mangle]
 pub unsafe extern "C" fn raw_string_drop(msg: RawString) {
     if msg.inner != std::ptr::null_mut() {
-        CString::from_raw(msg.inner);
+        drop(CString::from_raw(msg.inner));
     }
 }
 

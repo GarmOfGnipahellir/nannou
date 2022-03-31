@@ -44,8 +44,8 @@ struct SvgPath {
     events: Vec<PathEvent>,
     weight: f32,
     color: Rgba,
-    width: f32,
-    height: f32,
+    _width: f32,
+    _height: f32,
 }
 
 impl SvgPath {
@@ -54,8 +54,8 @@ impl SvgPath {
             events,
             weight,
             color,
-            width,
-            height,
+            _width: width,
+            _height: height,
         }
     }
 }
